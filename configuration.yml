@@ -1,16 +1,17 @@
-data_source dbsource:  
-    type: snowflake
-    account: dx24402.ap-south-1.aws
-    username: Prasanna2411
-    password: ANJI@14322p
-    role: accountadmin
-    database: SNOWFLAKE_SAMPLE_DATA
-    warehouse: compute_wh
-    schema:   TPCH_SF1000
-    threads: 10
-    client_session_keep_alive: False
-
-
+data_source snowflake_db:
+  type: snowflake
+  connection:
+    username: Janardhanreddy
+    password: Prasanna@0724
+    account: tv75323.central-india.azure
+    database: AIRFLOW_TUTORIAL_DB
+    warehouse: COMPUTE_WH
+    role: ACCOUNTADMIN
+    client_session_keep_alive: true
+    session_parameters:
+      QUERY_TAG: soda-queries
+      QUOTED_IDENTIFIERS_IGNORE_CASE: false
+    schema: AIRFLOW_TUTORIAL_SCHEMA
 soda_cloud:
   host: cloud.soda.io
   api_key_id: 541a5d47-d9de-4c50-b670-c9befe01575e
