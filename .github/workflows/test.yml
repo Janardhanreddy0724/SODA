@@ -1,0 +1,19 @@
+- name: Soda Library Action
+  uses: sodadata/soda-github-action@v1.0.0
+  with:
+    soda_library_version: v1.0.4
+    data_source: snowflake
+    configuration: .soda/configuration.yaml
+    checks: .soda/checks.yaml
+- name: Perform Soda Scan
+  uses: sodadata/soda-github-action@v1
+  env:
+    SODA_CLOUD_API_KEY: 541a5d47-d9de-4c50-b670-c9befe01575e
+    SODA_CLOUD_API_SECRET: YnORUwDzpqsVxSU5by0Ayl4kAabiwRFd1303kNvAixgqn3cWlDgkmw
+    POSTGRES_USERNAME: Janardhanreddy
+    POSTGRES_PASSWORD: Prasanna@0724
+  with:
+    soda_library_version: v1.0.4
+    data_source: snowflake
+    configuration: .soda/configuration.yaml
+    checks: .soda/checks.yaml
