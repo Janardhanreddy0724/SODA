@@ -1,0 +1,4 @@
+checks for SUPPLIER:
+  - max(S_ACCTBAL):
+      name: AVG_Check
+      fail: when > 450
