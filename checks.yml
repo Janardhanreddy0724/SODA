@@ -1,4 +1,9 @@
-checks for SUPPLIER:
-  - max(S_ACCTBAL):
-      name: AVG_Check
-      fail: when > 450
+checks for movie:
+  - duplicate_count("Title") = 0:
+      name: Ensure that  all titles are unique
+  - missing_count("Title") = 0:
+      name: Ensure that all titles are present
+  - invalid_count("Rating") = 0:
+      name: Ensure that all ratings are valid
+      valid min: 0
+      valid max: 10
